@@ -1,6 +1,6 @@
 const express = require("express")
 const bodyParser = require('body-parser')
-const morgan = require("morgan")
+//const morgan = require("morgan")
 const app = express()
 const cors = require('cors')
 
@@ -32,9 +32,9 @@ let persons =  [
     }
   ]
 
-morgan.token('post-data', (req, res) => JSON.stringify(req.body))
+//morgan.token('post-data', (req, res) => JSON.stringify(req.body))
 
-app.use(morgan(':method :url :status :res[content-length] - :response-time ms :post-data'))
+//app.use(morgan(':method :url :status :res[content-length] - :response-time ms :post-data'))
 
 app.get('/', (req, res) => {
     res.redirect('/info')
