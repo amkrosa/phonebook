@@ -7,7 +7,7 @@
     "start": "node index.js",
     "watch": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf build && cd ../fullstackopen2019/part2/phonebook && npm run build --prod && cp -r build ../../../phonebook_fso2k19/build",
+    "build:ui": "rm -rf build && cd ../fullstackopen2019/part2/phonebook && npm run build --prod && cp -r build ../../../phonebook_fso2019/build",
     "deploy": "git push heroku master",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
     "logs:prod": "heroku logs --tail"
@@ -18,11 +18,16 @@
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.6.3"
+    "mongoose": "^5.6.3",
+    "mongoose-unique-validator": "^2.0.3"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-security": "^1.4.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1"
